@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historial Médico</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 text-gray-900 min-h-screen">
+  <header class="bg-blue-600 text-white p-6 shadow-md">
+    <div class="container mx-auto">
+      <h1 class="text-2xl font-bold">Historial Médico</h1>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 py-10">
+    <!-- Formulario de búsqueda -->
+    <div class="mb-8">
+      <form class="flex flex-col sm:flex-row gap-4">
+        <input type="text" placeholder="Buscar por nombre, DNI o código" class="w-full px-4 py-3 rounded-lg shadow-sm border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow font-semibold transition">Buscar</button>
+      </form>
+    </div>
+
+    <!-- Lista de historial médico -->
+    <div class="space-y-4">
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-5 cursor-pointer border-l-4 border-blue-500">
+        <div class="flex justify-between items-center">
+          <div>
+            <h3 class="text-lg font-semibold">Juan Pérez</h3>
+            <p class="text-sm text-gray-600">Consulta: Dolor abdominal | 12/05/2025</p>
+          </div>
+          <i class="bi bi-chevron-right text-2xl text-gray-400"></i>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-5 cursor-pointer border-l-4 border-green-500">
+        <div class="flex justify-between items-center">
+          <div>
+            <h3 class="text-lg font-semibold">Lucía Martínez</h3>
+            <p class="text-sm text-gray-600">Consulta: Control de embarazo | 10/05/2025</p>
+          </div>
+          <i class="bi bi-chevron-right text-2xl text-gray-400"></i>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-5 cursor-pointer border-l-4 border-red-500">
+        <div class="flex justify-between items-center">
+          <div>
+            <h3 class="text-lg font-semibold">Carlos Ruiz</h3>
+            <p class="text-sm text-gray-600">Consulta: Urgencia por accidente | 09/05/2025</p>
+          </div>
+          <i class="bi bi-chevron-right text-2xl text-gray-400"></i>
+        </div>
+      </div>
+
+      <!-- Más registros -->
+    </div>
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfil de Médico - Ejemplo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex flex-col">
+  <!-- Header -->
+  <header class="bg-blue-600 text-white shadow">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-xl font-bold">TMEDC</h1>
+      <nav class="space-x-4">
+        <a href="#" class="hover:underline">Inicio</a>
+        <a href="#" class="hover:underline">Nosotros</a>
+        <a href="#" class="hover:underline">Servicios</a>
+        <a href="#" class="hover:underline">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Perfil del médico -->
+  <section class="bg-white py-12">
+    <div class="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
+      <!-- Imagen -->
+      <div class="flex justify-center">
+        <img src="../assets/img/ejemplodictor.jpg" alt="Foto del médico" class="rounded-xl shadow-md max-h-[500px] object-cover w-full">
+      </div>
+      <!-- Información -->
+      <div>
+        <h2 class="text-3xl font-bold text-gray-800 mb-2">Dr. Alejandro Pérez</h2>
+        <p class="text-blue-600 mb-4">Especialista en Ginecología y Salud Reproductiva</p>
+        <ul class="text-sm text-gray-600 mb-6 space-y-1">
+          <li><strong class="text-gray-800">Código CMP:</strong> 872349</li>
+          <li><strong class="text-gray-800">Experiencia:</strong> 15+ años</li>
+          <li><strong class="text-gray-800">Ubicación:</strong> Clínica San Rafael, Miraflores - Lima</li>
+        </ul>
+        <p class="text-gray-600 mb-6">Apasionado por la salud femenina, el Dr. Alejandro ha acompañado a cientos de pacientes en sus procesos de diagnóstico, tratamiento y orientación reproductiva. Con enfoque humano, integral y actualizado.</p>
+        <div class="flex gap-4">
+          <a href="#" class="px-5 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Agendar Consulta</a>
+          <a href="#" class="text-blue-600 hover:underline">Ver Perfil Completo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Guía de uso -->
+  <section class="bg-gray-50 py-16">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-2xl font-bold text-gray-800">¿Cómo se realizan los pagos?</h2>
+        <p class="text-gray-600">Sigue esta guía rápida para completar tu consulta médica en línea.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Paso 1 -->
+        <div class="bg-white p-6 rounded-xl shadow-md text-center">
+          <div class="mb-4 text-blue-500">
+            <i data-lucide="calendar-check" class="w-10 h-10 mx-auto"></i>
+          </div>
+          <h3 class="font-semibold mb-2">1. Reserva tu cita</h3>
+          <p class="text-sm text-gray-600">Selecciona el médico y el horario disponible desde nuestra plataforma.</p>
+        </div>
+
+        <!-- Paso 2 -->
+        <div class="bg-white p-6 rounded-xl shadow-md text-center">
+          <div class="mb-4 text-green-500">
+            <i data-lucide="credit-card" class="w-10 h-10 mx-auto"></i>
+          </div>
+          <h3 class="font-semibold mb-2">2. Realiza el pago</h3>
+          <p class="text-sm text-gray-600">Paga con tarjeta, Yape o Plin directamente en la plataforma de forma segura.</p>
+        </div>
+
+        <!-- Paso 3 -->
+        <div class="bg-white p-6 rounded-xl shadow-md text-center">
+          <div class="mb-4 text-red-500">
+            <i data-lucide="video" class="w-10 h-10 mx-auto"></i>
+          </div>
+          <h3 class="font-semibold mb-2">3. Conéctate a tu consulta</h3>
+          <p class="text-sm text-gray-600">Recibirás un enlace por correo o WhatsApp para la videollamada.</p>
+        </div>
+      </div>
+
+      <div class="text-center mt-10">
+        <p class="text-sm text-gray-600 mb-2">¿Tienes dudas o problemas con tu pago?</p>
+        <a href="#" class="inline-block px-5 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50">Contactar soporte</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-600 text-white mt-auto py-8">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
+      <div>
+        <h3 class="font-semibold text-lg">MiSitio</h3>
+        <p class="text-sm">Tu sitio de confianza para aprender y crecer.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-lg">Enlaces</h3>
+        <ul class="text-sm space-y-1">
+          <li><a href="#" class="hover:underline">Inicio</a></li>
+          <li><a href="#" class="hover:underline">Servicios</a></li>
+          <li><a href="#" class="hover:underline">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold text-lg">Contáctanos</h3>
+        <p class="text-sm">Email: contacto@misitio.com</p>
+        <p class="text-sm">Tel: +51 123 456 789</p>
+      </div>
+    </div>
+    <div class="text-center text-sm mt-6">&copy; 2025 MiSitio. Todos los derechos reservados.</div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+
+</html>

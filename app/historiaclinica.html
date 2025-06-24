@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Historial Médico</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex flex-col">
+  <!-- Header -->
+  <header class="bg-blue-600 text-white shadow">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-xl font-bold">TMEDC</h1>
+      <nav class="space-x-4">
+        <a href="#" class="hover:underline">Inicio</a>
+        <a href="#" class="hover:underline">Pacientes</a>
+        <a href="#" class="hover:underline">Historial</a>
+        <a href="#" class="hover:underline">Cerrar sesión</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Historial Médico -->
+  <main class="flex-grow container mx-auto px-4 py-10">
+    <h2 class="text-3xl font-bold text-gray-800 mb-6">Historial Médico de María López</h2>
+
+    <div class="bg-white p-6 rounded-lg shadow mb-8">
+      <h3 class="text-xl font-semibold text-blue-600 mb-4">Información General</h3>
+      <ul class="text-gray-700 space-y-2">
+        <li><strong>Edad:</strong> 32 años</li>
+        <li><strong>DNI:</strong> 75213456</li>
+        <li><strong>Teléfono:</strong> +51 987 654 321</li>
+        <li><strong>Correo:</strong> maria.lopez@gmail.com</li>
+      </ul>
+    </div>
+        <div class="bg-white p-6 rounded-lg shadow mb-8">
+      <h3 class="text-xl font-semibold text-blue-600 mb-4">Información de la cita</h3>
+      <ul class="text-gray-700 space-y-2">
+        <li><strong>Motivo de cita:</strong> Dolor abdominal</li>
+        <li><strong>Receta:</strong>clonacepan</li>
+        <li><strong>Indicaciones:</strong> Tomar despues de comer</li>
+      </ul>
+    </div>
+
+    <div class="bg-white p-6 rounded-lg shadow mb-8">
+      <h3 class="text-xl font-semibold text-blue-600 mb-4">Consultas Recientes</h3>
+      <table class="min-w-full table-auto border text-sm">
+        <thead class="bg-gray-200 text-gray-700">
+          <tr>
+            <th class="px-4 py-2 text-left">Fecha</th>
+            <th class="px-4 py-2 text-left">Motivo</th>
+            <th class="px-4 py-2 text-left">Diagnóstico</th>
+            <th class="px-4 py-2 text-left">Tratamiento</th>
+          </tr>
+        </thead>
+        <tbody class="text-gray-600">
+          <tr class="border-t">
+            <td class="px-4 py-2">2025-05-03</td>
+            <td class="px-4 py-2">Dolor abdominal</td>
+            <td class="px-4 py-2">Gastritis</td>
+            <td class="px-4 py-2">Omeprazol 20mg por 10 días</td>
+          </tr>
+          <tr class="border-t">
+            <td class="px-4 py-2">2025-03-20</td>
+            <td class="px-4 py-2">Control anual</td>
+            <td class="px-4 py-2">Salud estable</td>
+            <td class="px-4 py-2">Seguimiento anual</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="bg-white p-6 rounded-lg shadow">
+      <h3 class="text-xl font-semibold text-blue-600 mb-4">Exámenes Médicos</h3>
+      <ul class="text-gray-700 list-disc pl-5 space-y-2">
+        <li>Ecografía abdominal (2025-05-03) - Resultados normales</li>
+        <li>Análisis de sangre (2025-03-18) - Colesterol levemente elevado</li>
+      </ul>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-blue-600 text-white mt-auto py-6">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
+      <div>
+        <h3 class="font-semibold text-lg">TMEDC</h3>
+        <p class="text-sm">Plataforma de gestión médica profesional.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-lg">Enlaces</h3>
+        <ul class="text-sm space-y-1">
+          <li><a href="#" class="hover:underline">Inicio</a></li>
+          <li><a href="#" class="hover:underline">Pacientes</a></li>
+          <li><a href="#" class="hover:underline">Soporte</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold text-lg">Contáctanos</h3>
+        <p class="text-sm">Email: soporte@tmedc.com</p>
+        <p class="text-sm">Tel: +51 987 654 321</p>
+      </div>
+    </div>
+    <div class="text-center text-sm mt-6">&copy; 2025 TMEDC. Todos los derechos reservados.</div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+
+</html>
