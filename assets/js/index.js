@@ -4,14 +4,16 @@ formularioconsulta.addEventListener("submit",function(event){
     event.preventDefault();
     var datos=Object.fromEntries(new FormData(formularioconsulta));
     console.log(datos);
+    generarConsulta(datos);
 })
 function generarConsulta(consultaobj) {
+
   const datos = {
     action: "generarConsulta",
-    consulta: consultaobj,
+    ...consultaobj,
   };
-
-  fetch("controllers/consultas.php", {
+  console.log(datos,"generando consulta");
+  fetch("controllers/contactos.php", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
