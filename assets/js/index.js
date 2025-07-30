@@ -33,49 +33,5 @@ function generarConsulta(consultaobj) {
     });
 }
 
-function crearAlertaContacto(mensaje, tipo) {
-  //limpiar alerta
-  alertacontacto.innerHTML = "";
-  //validar tipo de alerta
-
-  if (tipo == 1) {
-    var divalerta = document.createElement("div");
-    divalerta.setAttribute("role", "alert");
-    divalerta.setAttribute("class", "rounded-md border border-gray-300 bg-green-500 p-4 mt-4");
-    var divalertacontenido = document.createElement("div");
-    divalertacontenido.setAttribute("class", "flex items-start gap-4");
-    var divalertatexto = document.createElement("div");
-    divalertatexto.setAttribute("class", "flex-1 text-center");
-    var strong = document.createElement("strong");
-    strong.setAttribute("class", "font-medium text-gray-900 dark:text-white");
-    var textonombre = document.createTextNode(mensaje);
-    strong.appendChild(textonombre);
-    divalertatexto.appendChild(strong);
-    divalertacontenido.appendChild(divalertatexto);
-    divalerta.appendChild(divalertacontenido);
-    alertacontacto.appendChild(divalerta);
-    return;
-  } else {
-    var divalerta = document.createElement("div");
-    divalerta.setAttribute("role", "alert");
-    divalerta.setAttribute("class", "rounded-md border border-gray-300 bg-red-500 p-4 mt-4");
-    var divalertacontenido = document.createElement("div");
-    divalertacontenido.setAttribute("class", "flex items-start gap-4");
-    var divalertatexto = document.createElement("div");
-    divalertatexto.setAttribute("class", "flex-1 text-center");
-    var strong = document.createElement("strong");
-    strong.setAttribute("class", "font-medium text-gray-900 dark:text-white");
-    var textonombre = document.createTextNode(mensaje);
-    strong.appendChild(textonombre);
-    divalertatexto.appendChild(strong);
-    divalertacontenido.appendChild(divalertatexto);
-    divalerta.appendChild(divalertacontenido);
-    alertacontacto.appendChild(divalerta);
-    return;
-  }
-
-
-
-}
 
 
