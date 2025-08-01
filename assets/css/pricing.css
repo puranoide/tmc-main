@@ -1,0 +1,336 @@
+:root {
+    /* Colores */
+    --color-primary: #0077B6;
+    --color-secondary: #00BFA6;
+    --color-accent: #FFD166;
+    --color-dark: #1c1c1c;
+    --color-text: #444;
+    --color-white: #FFFFFF;
+    --color-bg: #F9FBFC;
+
+    /* Tipografía */
+    --font-main: 'Inter', sans-serif;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Body */
+body {
+    font-family: var(--font-main);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    margin: 0;
+}
+
+/* =============================
+   HEADER
+============================= */
+header {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+nav ul li a {
+    color: var(--color-white);
+    font-size: 1;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--color-accent);
+}
+
+/* =============================
+   PRINCING
+============================= */
+.precios {
+    background-color: var(--color-bg, #F9FBFC);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.precios h2 {
+    font-size: 2.5rem;
+    color: var(--color-primary, #0077B6);
+    margin-bottom: 3rem;
+}
+
+.planes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.plan {
+    background-color: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 16px;
+    padding: 2rem;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.plan:hover {
+    transform: translateY(-5px);
+}
+
+.plan h3 {
+    font-size: 1.5rem;
+    color: var(--color-secondary, #00BFA6);
+    margin-bottom: 1rem;
+}
+
+.precio {
+    font-size: 2rem;
+    color: var(--color-dark, #1c1c1c);
+    margin: 1rem 0;
+    font-weight: bold;
+}
+
+.plan ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+.plan ul li {
+    position: relative;
+    cursor: help;
+    margin-bottom: 0.75rem;
+    color: var(--color-text, #444);
+}
+
+.plan ul li::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0077B6;
+    color: white;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    font-size: 0.85rem;
+    z-index: 100;
+}
+
+.plan ul li::before {
+    content: '';
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: #0077B6;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 99;
+}
+
+.plan ul li:hover::after,
+.plan ul li:hover::before {
+    opacity: 1;
+}
+
+
+.boton-plan {
+    background-color: var(--color-primary, #0077B6);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.boton-plan:hover {
+    background-color: var(--color-secondary, #00BFA6);
+}
+
+/* Plan destacado */
+.plan.destacado {
+    border: 2px solid var(--color-secondary, #00BFA6);
+    background-color: #e8fdfc;
+}
+
+.boton-secundario {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: transparent;
+    color: #0077B6;
+    border: 2px solid #0077B6;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.boton-secundario:hover {
+    background-color: #0077B6;
+    color: #fff;
+}
+
+/* =============================
+   Contacto
+============================= */
+
+.contacto {
+    background-color: #fff;
+    padding: 4rem 2rem;
+    color: var(--color-text);
+}
+
+.contacto .container {
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+}
+
+.contacto h2 {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.contacto .descripcion {
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+    color: #555;
+}
+
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: left;
+}
+
+.form-grupo {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-grupo label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.form-grupo input,
+.form-grupo textarea {
+    padding: 0.9rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: var(--font-main);
+    transition: border-color 0.3s ease;
+}
+
+.form-grupo input:focus,
+.form-grupo textarea:focus {
+    border-color: var(--color-secondary);
+    outline: none;
+}
+
+.boton-enviar {
+    background-color: var(--color-secondary);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background-color 0.3s ease;
+}
+
+.boton-enviar:hover {
+    background-color: var(--color-primary);
+}
+
+/* =============================
+   FOOTER
+============================= */
+footer {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* =============================
+   MEDIA QUERIES
+============================= */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .planes-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .plan {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .plan ul li::after {
+        white-space: normal;
+        max-width: 220px;
+        text-align: center;
+    }
+}

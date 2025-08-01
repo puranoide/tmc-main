@@ -2,129 +2,202 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Perfil de Médico - Ejemplo</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datamedic</title>
+  <link rel="stylesheet" href="../assets/css/perfilmedico.css">
 </head>
 
-<body class="bg-gray-100 min-h-screen flex flex-col">
-  <!-- Header -->
-  <header class="bg-blue-600 text-white shadow">
-    <div class="container mx-auto flex justify-between items-center p-4">
-      <h1 class="text-xl font-bold">TMEDC</h1>
-      <nav class="space-x-4">
-        <a href="#" class="hover:underline">Inicio</a>
-        <a href="#" class="hover:underline">Nosotros</a>
-        <a href="#" class="hover:underline">Servicios</a>
-        <a href="#" class="hover:underline">Contacto</a>
-      </nav>
-    </div>
+<body>
+
+  <header>
+    <h1>DATAMEDIC</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Sobre nosotros</a></li>
+        <li><a href="#">Perfil medico</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
   </header>
-
-  <!-- Perfil del médico -->
-  <section class="bg-white py-12">
-    <div class="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
-      <!-- Imagen -->
-      <div class="flex justify-center">
-        <img src="../assets/img/ejemplodictor.jpg" alt="Foto del médico" class="rounded-xl shadow-md max-h-[500px] object-cover w-full">
+  <div class="anuncio-flotante" id="anuncioFlotante">
+    <div class="anuncio-contenido">
+      <img src="../assets/img/instagram_icon.png" alt="Logo Datamedic" class="logo-anuncio">
+      <div class="texto-anuncio">
+        <p><strong>Datamedic</strong> - Gestión médica inteligente para tu consultorio.</p>
+        <a href="#" class="btn-anuncio">Descúbrelo</a>
       </div>
-      <!-- Información -->
-      <div>
-        <h2 class="text-3xl font-bold text-gray-800 mb-2">Dr. Alejandro Pérez</h2>
-        <p class="text-blue-600 mb-4">Especialista en Ginecología y Salud Reproductiva</p>
-        <ul class="text-sm text-gray-600 mb-6 space-y-1">
-          <li><strong class="text-gray-800">Código CMP:</strong> 872349</li>
-          <li><strong class="text-gray-800">Experiencia:</strong> 15+ años</li>
-          <li><strong class="text-gray-800">Ubicación:</strong> Clínica San Rafael, Miraflores - Lima</li>
-        </ul>
-        <p class="text-gray-600 mb-6">Apasionado por la salud femenina, el Dr. Alejandro ha acompañado a cientos de pacientes en sus procesos de diagnóstico, tratamiento y orientación reproductiva. Con enfoque humano, integral y actualizado.</p>
-        <div class="flex gap-4">
-          <a href="#" class="px-5 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Agendar Consulta</a>
-          <a href="#" class="text-blue-600 hover:underline">Ver Perfil Completo</a>
-        </div>
+      <!--<button class="cerrar-anuncio" onclick="cerrarAnuncio()">×</button>-->
+    </div>
+  </div>
+
+
+
+  <section class="hero-medico">
+    <div class="contenido-hero-medico">
+      <div class="img-doctor">
+        <img src="../assets/img/doctor01.png" alt="Dr. Juan Pérez">
+      </div>
+      <div class="texto-doctor">
+        <h2>Dr. Juan Pérez</h2>
+        <p class="especialidad">Cardiólogo Certificado</p>
+        <p class="cmp">CMP: 12345</p>
+        <p class="experiencia">+12 años de experiencia en salud cardiovascular</p>
+        <p class="resena">"Valorado por su trato humano, profesionalismo y precisión diagnóstica."</p>
+        <a href="#reservar" class="btn-hero-doctor">Agendar Cita</a>
       </div>
     </div>
   </section>
 
-  <!-- Guía de uso -->
-  <section class="bg-gray-50 py-16">
-    <div class="container mx-auto px-4">
-      <div class="text-center mb-12">
-        <h2 class="text-2xl font-bold text-gray-800">¿Cómo se realizan los pagos?</h2>
-        <p class="text-gray-600">Sigue esta guía rápida para completar tu consulta médica en línea.</p>
-      </div>
 
-      <div class="grid md:grid-cols-3 gap-8">
-        <!-- Paso 1 -->
-        <div class="bg-white p-6 rounded-xl shadow-md text-center">
-          <div class="mb-4 text-blue-500">
-            <i data-lucide="calendar-check" class="w-10 h-10 mx-auto"></i>
-          </div>
-          <h3 class="font-semibold mb-2">1. Reserva tu cita</h3>
-          <p class="text-sm text-gray-600">Selecciona el médico y el horario disponible desde nuestra plataforma.</p>
+
+
+  <section class="testimonial-carousel">
+    <h2>Reseñas de Pacientes</h2>
+    <div class="carousel-wrapper">
+      <button class="carousel-btn prev">&#8592;</button>
+
+      <div class="carousel-track">
+        <div class="testimonial-card">
+          <img src="../assets/img/usericon.jpg" alt="Paciente 1" />
+          <h4>Lucía Pérez</h4>
+          <div class="stars">★★★★★</div>
+          <p>“Excelente atención, me sentí escuchada y bien atendida.”</p>
         </div>
 
-        <!-- Paso 2 -->
-        <div class="bg-white p-6 rounded-xl shadow-md text-center">
-          <div class="mb-4 text-green-500">
-            <i data-lucide="credit-card" class="w-10 h-10 mx-auto"></i>
-          </div>
-          <h3 class="font-semibold mb-2">2. Realiza el pago</h3>
-          <p class="text-sm text-gray-600">Paga con tarjeta, Yape o Plin directamente en la plataforma de forma segura.</p>
+        <div class="testimonial-card">
+          <img src="../assets/img/usericon.jpg" alt="Paciente 2" />
+          <h4>José Ramírez</h4>
+          <div class="stars">★★★★☆</div>
+          <p>“Muy profesional, resolvió todas mis dudas.”</p>
         </div>
 
-        <!-- Paso 3 -->
-        <div class="bg-white p-6 rounded-xl shadow-md text-center">
-          <div class="mb-4 text-red-500">
-            <i data-lucide="video" class="w-10 h-10 mx-auto"></i>
-          </div>
-          <h3 class="font-semibold mb-2">3. Conéctate a tu consulta</h3>
-          <p class="text-sm text-gray-600">Recibirás un enlace por correo o WhatsApp para la videollamada.</p>
+        <div class="testimonial-card">
+          <img src="../assets/img/usericon.jpg" alt="Paciente 3" />
+          <h4>Carla Torres</h4>
+          <div class="stars">★★★★★</div>
+          <p>“El doctor fue puntual y muy amable. Recomendado.”</p>
         </div>
       </div>
 
-      <div class="text-center mt-10">
-        <p class="text-sm text-gray-600 mb-2">¿Tienes dudas o problemas con tu pago?</p>
-        <a href="#" class="inline-block px-5 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50">Contactar soporte</a>
+      <button class="carousel-btn next">&#8594;</button>
+    </div>
+  </section>
+
+  <section class="social-media">
+    <h3>Sigue al Dr. Juan Pérez</h3>
+    <div class="social-icons">
+      <a href="#" class="social-icon facebook" aria-label="Facebook"><img src="../assets/img/facebook_icon.png"
+          alt="Facebook" /></a>
+      <a href="#" class="social-icon instagram" aria-label="Instagram"><img src="../assets/img/instagram_icon.png"
+          alt="Instagram" /></a>
+      <a href="#" class="social-icon linkedin" aria-label="LinkedIn"><img src="../assets/img/linkedin_icon.png"
+          alt="LinkedIn" /></a>
+    </div>
+  </section>
+
+
+
+
+  <div class="calendario-responsive">
+    <section class="disponibilidad-section">
+      <h2>Disponibilidad del Doctor</h2>
+      <p>Selecciona una fecha y hora para agendar tu cita</p>
+      <div class="calendario-disponibilidad">
+        <!-- Día -->
+        <div class="dia">
+          <h3>Lunes</h3>
+          <button class="hora disponible">9:00</button>
+          <button class="hora disponible">14:00</button>
+        </div>
+        <div class="dia">
+          <h3>Martes</h3>
+          <button class="hora no-disponible">—</button>
+          <button class="hora disponible">15:00</button>
+        </div>
+        <div class="dia">
+          <h3>Miércoles</h3>
+          <button class="hora disponible">10:00</button>
+          <button class="hora no-disponible">—</button>
+        </div>
+        <div class="dia">
+          <h3>Jueves</h3>
+          <button class="hora disponible">11:00</button>
+          <button class="hora disponible">16:00</button>
+        </div>
+        <div class="dia">
+          <h3>Viernes</h3>
+          <button class="hora no-disponible">—</button>
+          <button class="hora no-disponible">—</button>
+        </div>
+        <div class="dia">
+          <h3>Sábado</h3>
+          <button class="hora disponible">12:00</button>
+          <button class="hora disponible">17:00</button>
+        </div>
+        <div class="dia">
+          <h3>Domingo</h3>
+          <button class="hora no-disponible">—</button>
+          <button class="hora disponible">9:00</button>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <section class="payment-methods">
+    <h3>El doctor acepta</h3>
+    <div class="payment-grid">
+      <div class="payment-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" alt="Visa" />
+        <p>Visa</p>
+      </div>
+      <div class="payment-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" />
+        <p>Mastercard</p>
+      </div>
+      <div class="payment-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" />
+        <p>PayPal</p>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-blue-600 text-white mt-auto py-8">
-    <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
-      <div>
-        <h3 class="font-semibold text-lg">MiSitio</h3>
-        <p class="text-sm">Tu sitio de confianza para aprender y crecer.</p>
-      </div>
-      <div>
-        <h3 class="font-semibold text-lg">Enlaces</h3>
-        <ul class="text-sm space-y-1">
-          <li><a href="#" class="hover:underline">Inicio</a></li>
-          <li><a href="#" class="hover:underline">Servicios</a></li>
-          <li><a href="#" class="hover:underline">Contacto</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="font-semibold text-lg">Contáctanos</h3>
-        <p class="text-sm">Email: contacto@misitio.com</p>
-        <p class="text-sm">Tel: +51 123 456 789</p>
-      </div>
-    </div>
-    <div class="text-center text-sm mt-6">&copy; 2025 MiSitio. Todos los derechos reservados.</div>
-  </footer>
+
 
   <script>
-    lucide.createIcons();
+    const track = document.querySelector('.carousel-track');
+    const prevBtn = document.querySelector('.carousel-btn.prev');
+    const nextBtn = document.querySelector('.carousel-btn.next');
+    let index = 0;
+
+    nextBtn.addEventListener('click', () => {
+      index = (index + 1) % track.children.length;
+      updateCarousel();
+    });
+
+    prevBtn.addEventListener('click', () => {
+      index = (index - 1 + track.children.length) % track.children.length;
+      updateCarousel();
+    });
+
+    function updateCarousel() {
+      const width = track.children[0].offsetWidth + 32; // card width + margin
+      track.style.transform = `translateX(-${index * width}px)`;
+    }
+
+    function cerrarAnuncio() {
+      document.getElementById('anuncioFlotante').style.display = 'none';
+    }
+
   </script>
+
+
+  <footer>
+    © 2025 Datamedic | <a href="#">Política de Privacidad</a> | desarrollado por <a href="#">Gabware</a>
+  </footer>
+
 </body>
 
 </html>
